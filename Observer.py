@@ -28,12 +28,12 @@ class Subject:
 
     def add_observers(self, observer: Observer):
         if observer in self.observers:
-            return print('observer already in observers')
+            return print('observer %s already in observers' % observer.name)
         self.observers.append(observer)
 
     def remove_observer(self, observer: Observer):
         if observer not in self.observers:
-            return print('observer not in observers')
+            return print('observer %s not in observers' % observer.name)
         self.observers.remove(observer)
 
     def notify(self, msg):
@@ -43,11 +43,14 @@ class Subject:
 
 xiao_ming = Observer("XiaoMing")
 li_hua = Observer("LiHua")
+li_lei = Observer("LiLei")
 rain = Subject()
 # 添加订阅
 rain.add_observers(xiao_ming)
 rain.add_observers(li_hua)
+rain.add_observers(li_hua)
 rain.notify("下雨了！")
 # 取消订阅
 rain.remove_observer(li_hua)
+rain.remove_observer(li_lei)
 rain.notify("打雷了！")
