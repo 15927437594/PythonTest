@@ -8,9 +8,8 @@ import csv
 
 if __name__ == '__main__':
     data = ['工站', "产品SN", '动作/测试项', '耗时', '开始时间', '结束时间']
-    f = open('test.csv', 'a', newline='')
+    f = open('Test.csv', 'a', newline='')
     writer = csv.writer(f)
-
     writer.writerow(data)
     writer.writerow(data)
     writer.writerow(data)

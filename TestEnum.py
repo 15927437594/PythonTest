@@ -9,7 +9,7 @@ from enum import Enum
 
 class HWMesMode(Enum):
     PRODUCT = 0x00  # 生产服务器
-    DEBUG = 0x01  # 测试服务器
+    DEBUG = 0x01    # 测试服务器
 
 
 if __name__ == '__main__':
