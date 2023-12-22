@@ -16,5 +16,5 @@ for root, _, files in os.walk(path):
                     print(cm_data)
                     filename = os.path.join(path, 'TPCM.txt')
                     with open(filename, 'a') as file_object:
-                        file_object.write(cm_data )
+                        file_object.write(cm_data)
                         file_object.write("\n")

@@ -16,3 +16,7 @@ if __name__ == '__main__':
     capacitance = 120
     angle = convert_capacitance_to_angle(p1, p2, capacitance)
     print(angle)
+
+    a = int(str(0x0025), 16)
+    print(a)
+    print(0x0025)

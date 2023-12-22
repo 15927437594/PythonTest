@@ -14,7 +14,6 @@ class TestQTimer:
 
     def __init__(self):
         super().__init__()
-        print('12222')
         self.burn_time = 0
         self.aging_time_timer = QTimer()
         self.aging_time_timer.timeout.connect(self.update_burn_time)
@@ -31,7 +30,8 @@ class TestQTimer:
         self.aging_time_timer.start(1000)
 
     def stop(self):
-        self.aging_time_timer.stop()
+        if self.aging_time_timer.isActive():
+            self.aging_time_timer.stop()
         self.burn_time = 0
 
 
@@ -39,6 +39,33 @@ if __name__ == '__main__':
     app = QApplication(sys.argv)
     timer = TestQTimer()
     timer.start()
+    brightness_value = int(0 * 255 / 100)
+    print(brightness_value)
+    brightness_value = int(1 * 255 / 100)
+    print(brightness_value)
+    brightness_value = int(2 * 255 / 100)
+    print(brightness_value)
+    brightness_value = int(3 * 255 / 100)
+    print(brightness_value)
+    brightness_value = int(4 * 255 / 100)
+    print(brightness_value)
+    brightness_value = int(5 * 255 / 100)
+    print(brightness_value)
+    brightness_value = int(90 * 255 / 100)
+    print(brightness_value)
+    brightness_value = int(91 * 255 / 100)
+    print(brightness_value)
+    brightness_value = int(92 * 255 / 100)
+    print(brightness_value)
+    brightness_value = int(93 * 255 / 100)
+    print(brightness_value)
+    brightness_value = int(94 * 255 / 100)
+    print(brightness_value)
+    brightness_value = int(95 * 255 / 100)
+    print(brightness_value)
+    brightness_value = int(100 * 255 / 100)
+    print(brightness_value)
+
     sys.exit(app.exec_())
 
 # from PyQt5.QtWidgets import QApplication
