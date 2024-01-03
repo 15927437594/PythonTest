@@ -1,7 +1,6 @@
 import os
 
 path = os.path.join(os.getcwd(), 'log_upgrade_asc')
-sn_list = []
 for root, _, files in os.walk(path):
     for file_name in files:
         print(root, file_name)
